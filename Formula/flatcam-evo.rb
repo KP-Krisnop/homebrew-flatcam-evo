@@ -1,10 +1,10 @@
 class FlatcamEvo < Formula
   include Language::Python::Virtualenv
+
   desc "2D Computer-Aided PCB Manufacturing (patched fork)"
   homepage "https://github.com/KP-Krisnop/flatcam-evo"
   url "https://github.com/KP-Krisnop/flatcam-evo/archive/refs/tags/v8.9.95.tar.gz"
   sha256 "7f88e1cd7cb1836e9dd3bbf5075739419bc43f3b974b6de1bbb44a97cc519dde"
-  version "8.9.95"
 
   depends_on "pkg-config" => :build
   depends_on "freetype"
@@ -26,9 +26,8 @@ class FlatcamEvo < Formula
                         "appHandlers", "appObjects", "appParsers", "appPlugins",
                         "assets", "config", "descartes", "doc", "libs", "locale",
                         "locale_template", "preprocessors", "tclCommands", "Utils"]
+    (libexec/"flatcam.py").chmod(0755)
     bin.install_symlink libexec/"flatcam.py" => "flatcam"
-    system "chmod", "+x", libexec/"flatcam.py"
-    system "chmod", "+x", bin/"flatcam"
   end
 
   test do
