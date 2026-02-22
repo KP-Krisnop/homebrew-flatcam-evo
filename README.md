@@ -1,11 +1,11 @@
 # homebrew-flatcam-evo
 
-Homebrew tap for [FlatCAM Evo (patched fork)](https://github.com/KP-Krisnop/flatcam-evo).
+Homebrew tap for [FlatCAM Evo (patched fork)](https://github.com/kpkrisnop/flatcam).
 
 ## Install
 
 ```bash
-brew tap KP-Krisnop/flatcam-evo
+brew tap kpkrisnop/flatcam-evo
 brew install flatcam-evo
 ```
 
